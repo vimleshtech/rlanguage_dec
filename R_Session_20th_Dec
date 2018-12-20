@@ -1,0 +1,164 @@
+
+
+prime <- function(num){
+  
+  i =2
+  flag = 1
+  
+  while( i<num){
+    
+    if(num %% i == 0){
+      
+      flag=0
+    }
+    
+    i=i+1
+    
+  }
+  
+  return(flag)
+}
+##
+
+factor<-function(n){
+    f =1 
+    
+    while(n>1)
+    {
+        f = f*n
+        n=n-1
+    }
+    return(f)
+    
+}
+
+###
+
+# Create two vectors of different lengths.
+# vector is one dimenssion and one type of data
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+name <- c("raman","jaitn","divya)
+
+#creatre array 
+
+#dim: dimenssion 
+#dim = c(3,3)  3 rows and 3 cols
+#dim = c(3,3,2)   3 rows and 3 cols , and repeat two times
+
+result <- array(c(vector1,vector2),dim = c(3,3))
+result <- array(c(vector1,vector2),dim = c(3,3,2))
+
+print(result)
+
+
+
+
+
+
+##
+# Create two vectors of different lengths.
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+column.names <- c("COL1","COL2","COL3")
+row.names <- c("ROW1","ROW2","ROW3")
+
+matrix.names <- c("Matrix1","Matrix2")
+
+# Take these vectors as input to the array.
+result <- array(c(vector1,vector2),dim = c(3,3,2),dimnames = list(row.names,column.names,matrix.names))
+
+print(result)
+
+################
+################
+
+print(seq(5, 9, by = 0.4))
+seq(1,100,by=10)
+
+v <- 1:100
+v <- c(1:100)
+
+t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
+
+t[1]
+
+t[c(2,3,6)]
+
+
+
+##
+v1 <- c(3,8,4,5,0,11)
+v2 <- c(4,11,0,8,1,2)
+          
+          
+rbind(v1,v2)
+
+
+cbind(v1,v2)
+
+
+##sort
+v <- c(3,8,4,5,0,11, -9, 304)
+
+sort(v)
+length(v)
+v[8:1]
+
+v2 = v*2
+
+v*v2
+
+
+##factor
+v <- c(1,1,1,2,2,3,4)
+
+as.factor(v)
+
+data <- c("East","West","East","North","North","East","West","West","West","East","North")
+
+is.factor(data)  #show type 
+
+
+data = as.factor(data) # to convert
+
+
+is.factor(data)
+
+
+
+
+##
+list_data <- list("Red", "Green", c(21,32,11), TRUE, 51.23, 119.1)
+print(list_data)
+list_data[3]
+
+##data frame
+emp.data <- data.frame(
+    emp_id = c (1:5), 
+    emp_name = c("Rick","Dan","Michelle","Ryan","Gary"),
+   salary = c(623.3,515.2,611.0,729.0,843.25), 
+   start_date = as.Date(c("2012-01-01", "2013-09-23", "2014-11-15", "2014-05-11",
+      "2015-03-27")),
+   stringsAsFactors = FALSE
+
+)
+
+
+##
+str(emp.data)
+
+summary(emp.data)
+
+result <- data.frame(emp.data$emp_name,emp.data$salary)
+
+#add new column
+emp.data$dept <- c("IT","Operations","IT","HR","Finance")
+
+
+##
+emp.data2  = emp.data
+
+
+emp <- rbind(emp.data,emp.data2)
+
