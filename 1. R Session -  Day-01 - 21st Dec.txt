@@ -1,0 +1,208 @@
+Today's Topics
+===========================
+Overview of R Programing. Why R Programing?
+Programing Environment setup
+R - Reserved Words
+R - Data Types
+R - Variables and Constants
+R – Operators
+R - Programming if...else
+R - Programming for loop
+R - while Loop
+R - break & next
+R - repeat Loop
+
+Overview of R Programing. Why R Programing?
+================================================
+-> R is open source(free) programing language
+-> R is plateform independent(works on multiple OS)
+-> R is easy to learn and leight weight 
+	
+Why R Programing?
+======================
+	Applicatiions:
+		->DataScience
+		->MachineLearning
+		->Data Analytics, Statsitics 
+
+Programing Environment setup
+==============================		
+->R Interpreter (which execute the R code/command/program)
+->RStudio 
+	https://www.rstudio.com/products/rstudio/download/\
+
+
+There are following default window in RStudio:
+	-RConsole/Command line	: we can execute adhoc command
+	-Terminal 		: 
+	-Script	
+	-Global Variable 	
+	
+Notes:
+	-RScript/Program should be saved with .r extension 
+	-Ctrl+Enter  is shortcut key to run all/selected command
+	
+R - Reserved Words: is also known as inbuilt/system defined words
+==========================
+?reserved		: show the list of reserved words
+	if
+	else
+	ifelse
+	while
+	for
+	switch
+	function 
+	etc.
+	
+R - Data Types
+=========================
+Note: R does allocate memory automatically
+	example:
+		a =11  # numeric
+		a ="skjsgjsg"   #character 
+
+There are following types of datatype:
+----------------------------------
+
+numeric
+	-integer
+	-double
+character
+	-string/text
+boolean
+	-bit value : TRUE OR FALSE 
+
+Vector
+Array
+List
+Factor
+DataFrame
+
+
+There are following inbuilt functions to check and convert data type/data
+====================================================================
+
+is.numeric()		: return TRUE or FALSE 
+is.character()
+
+typeof(data/variable)   : return name  datatpe 
+
+as.numeric()		: convert data from other type to numeric
+as.character()		: 
+
+print(data/message/var)	: show/return data 
+
+		
+readline(prompt="enter data ")		: to read data from console 
+
+
+
+R - Variables and Constants
+=========================================
+Variable : is temp. memory where data can be stored 
+Example:
+	correct syntax
+	---------------
+	a <- 11
+	a = 11
+	a1 =33
+	ab= 444
+	f_name ="raman"
+	
+	100 -> b
+	b <- 100
+
+	incorrect syntax
+	--------------------
+	1a <- 11
+	a b <- 22
+	a+b = 44
+	
+Constants
+=======================
+letters
+LETTERS
+month.name
+etc.
+
+R – Operators
+=======================
+Airthmtic:
+	+
+	-
+	*
+	^		
+	/		95/10 = 9.5
+	%/%		95%/% = 9	
+	%%		95%%10 = 5
+
+Conditional:
+	>
+	>=
+	<
+	<=
+	==
+	!=
+
+Logical:
+	&&		and 
+	||		or 
+
+	
+R - Programming if...else
+===========================
+-if condition 
+if(condition){
+
+}
+
+-if else  conditon 
+if(condition){
+
+}else{
+
+
+}
+-if else if else .. /ladder if else
+if(condition){
+
+}else if(condition){
+
+
+}else{
+
+
+}
+
+-nested if else/if inside if 
+if(condition){
+
+	if(condition){
+
+
+	}else{
+
+	}
+
+}else{
+
+
+}
+
+R - Programming for loop
+========================
+Loop: is iterator or repeation of statement 
+There are following types
+	-while Loop
+	-for loop 
+	
+R - break & next
+==================
+	break : terminate the loop when condition will match
+	next  : skip the current itermation and jump to another 	
+
+R - repeat Loop : repeat the given block of code infinite 
+==================
+	
+
+		
