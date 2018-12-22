@@ -1,0 +1,115 @@
+#vector 
+salary <- c(44444,323222,343444,5556,44444,55)
+name <- c("nitin","jatin","divya")
+
+salary[2]
+salary[2:4]
+
+length(salary)
+
+
+##factor 
+eid <- c(1,2,3,4,5,6)  # vector 
+ename <- c("raman","jatin","divya","Ayush","nitisha","monika") # vector 
+
+gender <- c("male","male","female","male","female","female")  
+#convert to factor/make factor from vector 
+gender = factor(gender)
+
+
+##R – Matrices
+n <- c(1:9) #vector
+
+#create matrix
+matrix(n,nrow = 3,ncol = 3)
+matrix(n,nrow = 3,ncol = 3,byrow = TRUE)
+
+##
+data<-c(1:10)
+matrix(data,nrow = 3,ncol = 4)
+
+
+
+##List 
+eid <- c(1,2,3,4,5,6)  # vector 
+
+data <- list(1,2,100,200,c("test1","test2"),400,eid )
+data[5]
+
+
+
+
+##array 
+v1<- c(1:9)
+v2<- c(11:19)
+
+array(c(v1,v2), dim = c(3,3,3))
+
+
+##reshape data
+v1<- c(1:9)
+v2<- c(11:19)
+
+v1
+v2
+
+rbind(v1,v2,c(101:109))
+cbind(v1,v2)
+
+###data fram : create table 
+
+data.frame(
+    eid = c(1:4),
+    ename = c("raman","jatin","divya","ayush"),
+    gender = c("male","male","female","male")
+)
+
+###
+eid = c(1:4)
+ename = c("raman","jatin","divya","ayush")
+gender = c("male","male","female","male")
+
+data.frame(
+  eid = eid,
+  ename = ename,
+  gender = gender
+)
+
+#######
+WAP TO GET COUNT OF GIVEN VALUE FROM Vectorize.EX: COUNT OF 3?
+  
+data <- c(1,3,4,5,6,7,3,3,4,5,67,7)
+
+c =0
+
+for(x in data){
+  
+  if(x == 3){
+    c =c+1
+    
+  }
+  
+}
+  
+c
+
+
+############33
+v1<-c(1,2,3,4,5)
+v2<-c(2,4,6,8,10)
+s=v2-v1
+print(s)
+
+##########
+v1<-c(1,2,3,4,5,6,7,8,9,10)
+m=mean(v1)
+print(m)
+
+for(x in v1){
+  if(x>m){
+    print(x)
+  }
+  }
+  
+}
+c
