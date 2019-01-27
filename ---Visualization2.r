@@ -14,6 +14,7 @@ str(mtcars)
 data=as.matrix(mtcars)
 
 head(data)
+
 # Default Heatmap (left)
 heatmap(data)
 
@@ -46,6 +47,7 @@ library(vcd)
 HairEyeColor
 
 mosaic(HairEyeColor, shade=TRUE, legend=TRUE)
+mosaic(HairEyeColor,shade=TRUE)
 
 ########################
 
@@ -100,6 +102,25 @@ corrgram(mtcars, order=NULL, lower.panel=panel.shade,
          main="Car Milage Data (unsorted)")
 
 
+corrgram(mtcars, order=TRUE, lower.panel=NULL,
+         upper.panel=panel.pie, text.panel=panel.txt,
+         main="Car Milage Data in PC2/PC1 Order",args.name=c(.3,.1))
+
+
+M<-cor(mtcars)
+head(round(M,2))
+
+install.packages("corrplot")
+
+library(corrplot)
+corrplot(M, method="circle")
+
+corrplot(M, type="upper")
+corrplot(M, type="upper", order="hclust")
+
+
+#####
+
 
 ######################
 #3D
@@ -115,18 +136,22 @@ x <- sep.l <- iris$Sepal.Length
 y <- pet.l <- iris$Petal.Length
 z <- sep.w <- iris$Sepal.Width
 
+a <- b <- 10
+
+
 
 
 scatter3D(x, y, z,  colvar = z, col = NULL, add = FALSE)
 
+scatter3D(x, y, z)
 
 scatter2D(x, y, colvar = NULL, col = NULL, add = FALSE)
 
 scatter3D(x, y, z, clab = c("Sepal", "Width (cm)"))
 
 
-scatter3D(x, y, z, colvar = NULL, col = "blue",
-          pch = 19, cex = 0.5)
+scatter3D(x, y, z,  col = rainbow(length(x)),
+          pch = 10, cex = 0.6)
 
 
 # full box
@@ -148,6 +173,7 @@ hist3D (x = 1:5, y = 1:4, z = VADeaths,
         xlab = "", ylab = "", zlab = "", main = "VADeaths",
         col = "#0072B2", border = "black", shade = 0.8,
         ticktype = "detailed", space = 0.15, d = 2, cex.axis = 1e-9)
+
 # Use text3D to label x axis
 text3D(x = 1:5, y = rep(0.5, 5), z = rep(3, 5),
        labels = rownames(VADeaths),
